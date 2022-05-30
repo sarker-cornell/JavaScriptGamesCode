@@ -19,7 +19,7 @@ startBtn.addEventListener("click", ()=>{
   if(paused) {
     paused=false;
     startTime = Date.now() - elapsedTime;
-    interval_Id = setInterval(updateTime, 200);
+    interval_Id = setInterval(updateTime, 10);
   }
 });
 
@@ -54,7 +54,7 @@ function updateTime(){
   mins = Math.floor((elapsedTime/(1000*60)) % 60);
   hrs = Math.floor((elapsedTime/(1000*60*60)) % 60);
 
-  milliseconds=millipad(milliseconds);
+  milliseconds=millipad(parseInt(milliseconds));
   seconds=pad(seconds);
   mins = pad(mins);
   hrs = pad(hrs);
@@ -69,9 +69,16 @@ function updateTime(){
     return padout
   }
 
-  function millipad(unit) {
+  function millipad(unit2) {
+    unit2 = String(unit2)
+    //console.log(unit2.length)
+    // if (unit2.length==1) {
+    //   unit2 = "00"+unit2
+    // } else if (unit2.length==2) {
+    //   unit2="0"+unit2
+    // }
 
-    //console.log((unit).length);
-    return unit
+    let padout2 = (unit2.length==1)? ("00"+unit2) : ((unit2.length==2)?"0"+unit2: unit2)
+    return padout2
   }
 }
