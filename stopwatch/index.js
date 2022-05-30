@@ -52,7 +52,7 @@ function updateTime(){
   milliseconds = Math.floor((elapsedTime) % 1000);
   seconds = Math.floor((elapsedTime/1000) % 60);
   mins = Math.floor((elapsedTime/(1000*60)) % 60);
-  hrs = Math.floor((elapsedTime/(1000*60*60)) % 60);
+  hrs = Math.floor((elapsedTime/(1000*60*60)) % 24);
 
   milliseconds=millipad(parseInt(milliseconds));
   seconds=pad(seconds);
