@@ -1,0 +1,27 @@
+#gameContainer{
+  text-align: center;
+}
+#gameBoard{
+  border: 4px solid;
+}
+#scoreText{
+  font-size: 100px;
+  font-family: "Permanent Marker", sans-serif;
+}
+#resetBtn{
+  font-size: 20px;
+  font-family: "Permanent Marker", sans-serif;
+  width:100px;
+  height:50px;
+  border:4px solid;
+  border-radius: 10px;
+  background-color: #d3d3d3;
+  opacity:0.8;
+  cursor: pointer;
+}
+#resetBtn:hover{
+  opacity:1;
+}
+#resetBtn:active{
+  background-color: snow;
+}
